@@ -1,0 +1,20 @@
+.page-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 50px;
+}
+
+.section-titles {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.section-paragraphs {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 15px;
+}
