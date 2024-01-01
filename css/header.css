@@ -1,12 +1,10 @@
+/* Navbar */
+
 .header-object {
   display: flex;
 }
 
-.rtp-background {
-  width: 100%;
-}
-
-.header-div {
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,21 +22,101 @@
   height: 55px;
 }
 
-.header-button {
-  background-color: darkblue;
-  color: white;
-  padding: 8px 15px;
-  font-size: 15px;
-  border-radius: 5px;
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  height: 32px;
+  width: 35px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.header-button:hover {
-  background-color: aqua;
-  transition: background-color 0.3s;
+.bar {
+  width: 35px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+
+/* Animation for hamburger menu */
+
+.bar::before, .bar::after {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.bar::before {
+  transform: translateY(-12px);
+}
+
+.bar::after {
+  transform: translateY(12px);
+}
+
+.toggle-button.open .bar {
+  background-color: transparent;
+}
+
+.toggle-button.open .bar::before {
+  transform: rotate(45deg);
+}
+
+.toggle-button.open .bar::after {
+  transform: rotate(-45deg);
+}
+
+/* Header buttons */
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links li {
+  margin-right: 5px;
+}
+
+.nav-links li a {
+  font-size: 17px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-links li a:hover {
+  background-color: rgb(166, 139, 59);
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Background Image and Banner Info */
 
 .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rtp-background {
+  width: 100%;
+  min-height: 1000px;
+  object-fit: cover;
+}
+
+.page-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,27 +124,121 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 20px;
   border-radius: 20px;
 }
 
 .banner-title {
   color: white;
+  font-size: 44px;
   margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 7px black;
 }
 
 .registration-button {
-  background-color: blue;
+  background-color: rgb(14, 166, 14);
   font-size: 20px;
   font-weight: bold;
   color: white;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 12px black;
+}
+
+.registration-button:hover {
+  background-color: rgb(30, 227, 30);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .registration-dates {
   color: white;
+  text-align: center;
+  text-shadow: 1px 1px 7px black;
+  margin-top: 5px;
+}
+
+
+
+/* Mobile Compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  /* Navbar */
+
+  .navbar {
+    padding: 20px;
+  }
+
+  .APSA-logo {
+    height: 45px;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-links {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: rgb(28, 48, 121);
+    padding: 10px;
+    top: 80px; /* Starts at bottom of header bar */
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0.3s;
+  }
+
+  .nav-links li {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links li a:hover {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /* Toggling the active class for clicking the navbar hamburger menu */
+  .nav-links.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0s;
+  }
+
+  .nav-links:not(.active) {
+    visibility: hidden; /* Out animation */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+  }
+
+
+
+  /* Banner Mobile Compatibility */
+
+  .page-title {
+    width: 80%;
+  }
+
+  .banner-title {
+    font-size: 28px;
+  }
+
+  .registration-button {
+    font-size: 20px;
+    padding: 6px 15px;
+  }
+
+  .registration-dates {
+    font-size: 20px;
+  }
 }

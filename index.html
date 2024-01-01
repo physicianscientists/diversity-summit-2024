@@ -9,30 +9,46 @@
   <link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
+
   <!-- Header -->
   <header class="header-object">
 
-    <!-- Background Image -->
-    <img src="img/research-triangle-park.jpg" alt="research-triangle-park" class="rtp-background">
-
     <!-- Header Nav Bar -->
-    <div class="header-div">
+    <div class="navbar">
+
+      <!-- APSA Logo -->
       <img src="img/APSA_Logo_White.png" alt="APSA logo" class="APSA-logo">
-      <div class="button-list">
-        <button class="header-button">Purpose</button>
-        <button class="header-button">Schedule</button>
-        <button class="header-button">Speakers</button>
-        <button class="header-button">Travel Info</button>
-        <button class="header-button">Sponsors</button>
+
+      <!-- Toggle Button Hamburger Menu -->
+      <div class="toggle-button" id="toggleButton">
+        <div class="bar"></div>
       </div>
+
+      <!-- Navbar Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="">Purpose</a></li>
+        <li><a href="">Schedule</a></li>
+        <li><a href="">Speakers</a></li>
+        <li><a href="">Travel Info</a></li>
+        <li><a href="">Sponsors</a></li>
+      </ul>
+
     </div>
+
+    <!-- Javascript for navbar -->
+    <script src="js/navbar.js"></script>
+
 
     <!-- Central Banner -->
     <div class="banner">
-      <h1 class="banner-title">Physician Scientist Diversity Summit</h1>
-      <button class="registration-button">Register</button>
-      <h2 class="registration-dates">Registration Deadline: TBD</h2>
-      <h2 class="registration-dates">Date: TBD</h2>
+      <!-- Background Image -->
+      <img src="img/research-triangle-park.jpg" alt="research-triangle-park" class="rtp-background">
+      <div class="page-title">
+        <h1 class="banner-title">Physician Scientist Diversity Summit</h1>
+        <button class="registration-button">Register</button>
+        <h2 class="registration-dates">Registration Deadline: TBD</h2>
+        <h2 class="registration-dates">Date: TBD</h2>
+      </div>
     </div>
   </header>
 
