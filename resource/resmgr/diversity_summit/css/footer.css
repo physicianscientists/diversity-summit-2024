@@ -9,6 +9,7 @@
 
 .footer-content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -67,4 +68,32 @@
   margin-top: 20px;
   padding-top: 10px;
   font-size: 14px;
+}
+
+
+
+/* Mobile Compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  .footer-object {
+    padding: 30px 7% 20px 7%;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+
+  .footer-section {
+    align-items: flex-start;
+    flex: 1;
+    margin: 0 0 30px 0;
+  }
+
+  .copyright {
+    margin-top: 5px;
+    padding-top: 0;
+  }
 }
