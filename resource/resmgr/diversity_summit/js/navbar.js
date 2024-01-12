@@ -24,6 +24,13 @@ toggleButton.addEventListener('click', () => {
   }
 })
 
+// Removes the lastNav when the screen is resized back to full screen to avoid resizing issues.
+window.addEventListener('resize', e => {
+  if (window.matchMedia(`(min-width: 1024px)`).matches) {
+    lastNavLink.innerHTML = '';
+  }
+});
+
 
 //toggleButton.addEventListener('click', () => {
 //  navLinks.classList.toggle('active');
