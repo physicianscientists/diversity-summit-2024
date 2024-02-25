@@ -1,0 +1,38 @@
+/* Purpose Section */
+
+.purpose-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 50px;
+}
+
+.purpose-titles {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.purpose-paragraphs {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+
+/* Mobile compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  .purpose-section {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 60px;
+  }
+
+}

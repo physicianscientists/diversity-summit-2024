@@ -1,0 +1,90 @@
+/* Background Image and Banner Info */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.rtp-background {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.banner-title {
+  color: white;
+  font-size: 44px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 7px black;
+}
+
+.save-date-button {
+  background-color: rgb(14, 166, 14);
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-shadow: 0 0 12px black;
+}
+
+.save-date-button:hover {
+  background-color: rgb(30, 227, 30);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.save-date-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.registration-dates {
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 7px black;
+  margin-top: 5px;
+}
+
+
+
+/* Banner Mobile Compatibility */
+
+@media screen and (max-width: 1024px) {
+
+    .page-title {
+      width: 80%;
+    }
+  
+    .banner-title {
+      font-size: 28px;
+    }
+  
+    .registration-button {
+      font-size: 20px;
+      padding: 6px 15px;
+    }
+  
+    .registration-dates {
+      font-size: 20px;
+    }
+
+}

@@ -14,6 +14,7 @@
   width: 100%;
   height: 80px;
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
   padding: 0 10%;
   z-index: 100;
 }
@@ -87,7 +88,7 @@
 
 .li-anchor {
   font-size: 17px;
-  color: white;
+  color: white !important;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 6px;
@@ -127,66 +128,6 @@
 }
 
 
-
-/* Background Image and Banner Info */
-
-.banner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.rtp-background {
-  width: 100%;
-  min-height: 1000px;
-  object-fit: cover;
-}
-
-.page-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.banner-title {
-  color: white;
-  font-size: 44px;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 1px 1px 7px black;
-}
-
-.registration-button {
-  background-color: rgb(14, 166, 14);
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-bottom: 5px;
-  box-shadow: 0 0 12px black;
-}
-
-.registration-button:hover {
-  background-color: rgb(30, 227, 30);
-  transition: background-color 0.3s ease-in-out;
-}
-
-.registration-dates {
-  color: white;
-  text-align: center;
-  text-shadow: 1px 1px 7px black;
-  margin-top: 5px;
-}
 
 
 
@@ -247,7 +188,9 @@
     background-color: transparent;
   }
 
+
   /* Toggling the active class for clicking the navbar hamburger menu */
+
   .nav-links.active {
     visibility: visible;
     opacity: 1;
@@ -260,25 +203,4 @@
     transition: opacity 0.3s, visibility 0s 0.3s;
   }
 
-
-
-
-  /* Banner Mobile Compatibility */
-
-  .page-title {
-    width: 80%;
-  }
-
-  .banner-title {
-    font-size: 28px;
-  }
-
-  .registration-button {
-    font-size: 20px;
-    padding: 6px 15px;
-  }
-
-  .registration-dates {
-    font-size: 20px;
-  }
 }

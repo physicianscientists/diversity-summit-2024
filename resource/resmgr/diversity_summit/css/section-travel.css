@@ -1,0 +1,69 @@
+/* Travel Section */
+
+.travel-section {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 50px;
+}
+
+.travel-titles {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.travel-subtitles {
+  margin-bottom: 6px;
+}
+
+.travel-paragraphs {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.travel-bullet-intro {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.travel-list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.travel-list li {
+  text-align: left;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 2px;
+  line-height: 1.5;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+}
+
+
+
+/* Mobile compatibility */
+
+@media screen and (max-width: 1024px) {
+
+  .travel-section {
+    padding-left: 7%;
+    padding-right: 7%;
+    margin-top: 60px;
+  }
+
+}
