@@ -5,7 +5,7 @@
   flex-direction: column;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 20px;
+  padding-top: 25px;
   margin-top: 50px;
   background-color: rgb(28, 48, 121);
 }
@@ -30,13 +30,7 @@
 .speakers-div-left {
   display: flex;
   flex-direction: row;
-  margin-bottom: 30px;
-}
-
-.speakers-div-right {
-  display: flex;
-  flex-direction: row-reverse;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .speaker-picture {
@@ -47,12 +41,9 @@
 
 .speaker-picture img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
-}
-
-.speakers-div-right p {
-  text-align: right;
 }
 
 .speaker-info {
@@ -71,11 +62,8 @@
   font-size: 18px;
   line-height: 1.5;
   padding-left: 3%;
-}
-
-.speakers-div-right .speaker-description-div {
-  padding-left: 0;
-  padding-right: 3%;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 
@@ -95,7 +83,7 @@
     font-size: 24px;
   }
 
-  .speakers-div-left, .speakers-div-right {
+  .speakers-div-left {
     flex-direction: column;
     align-items: center;
   }
@@ -104,21 +92,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60vw;
-    height: auto;
-  }
-  
-  .speaker-picture img {
     width: 100%;
     height: auto;
+    margin-bottom: 15px;
+  }
+
+  .speaker-picture img {
+    width: 80%;
+  }
+
+  .speaker-name {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .speaker-title {
+    text-align: left;
+    margin-bottom: 8px;
+  }
+
+  .speaker-affiliation {
+    margin-bottom: 20px;
+  }
+
+  .speaker-description-div {
+    padding: 0;
   }
 
   .speakers-div-left p {
-    text-align: center;
-  }
-
-  .speakers-div-right p {
-    text-align: center;
+    text-align: start;
   }
 
 }
