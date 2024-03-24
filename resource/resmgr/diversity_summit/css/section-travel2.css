@@ -66,4 +66,9 @@
     margin-top: 60px;
   }
 
+  .travel-paragraphs {
+    line-height: 1.3;
+    text-align: left;
+  }
+
 }

@@ -100,4 +100,9 @@
     margin-bottom: 4px;
   }
 
+  .schedule-paragraphs {
+    line-height: 1.3;
+    text-align: left;
+  }
+
 }
